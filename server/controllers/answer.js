@@ -2,7 +2,7 @@ const Answer = require('../models/answer')
 const Question = require('../models/question')
 
 const findAll = (req, res)=>{
-  Answer.find()
+  Answer.find({'QuestionId': req.params.idQuestion})
   .populate('UserId')
   .populate('QuestionId')
     .then(data=>{

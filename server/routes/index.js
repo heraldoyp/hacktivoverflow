@@ -25,8 +25,8 @@ router.delete('/question/:idQuestion', authentication, Question.destroy)
 
 router.get('/answer/:idQuestion', Answer.findAll)
 router.post('/question/:idQuestion/answer', Answer.create)
-router.put('/answer/:idAnswer/upvote', authentication, Answer.upVote)
-router.put('/answer/:idAnswer/downvote', authentication, Answer.downVote)
+router.get('/answer/:idAnswer/upvote', authentication, Answer.upVote)
+router.get('/answer/:idAnswer/downvote', authentication, Answer.downVote)
 router.delete('/answer/:idAnswer', authentication, Answer.destroy)
 
 module.exports = router;
